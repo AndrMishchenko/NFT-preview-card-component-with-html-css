@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0d1a2d;
+}
+
+.first-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 470px;
+    height: 700px;
+    background-color: #0c192c;
+    border-radius: 20px;
+}
+
+.doble-container{
+    top: -30px;
+    width: 370px;
+    max-height: 600px;
+    background-color: #15273f;
+    border-radius: 20px;
+    box-shadow: 20px 35px 10px #0c1729,
+                -20px 35px 10px #0c1729;
+}
+
+.main-image{
+    margin: 0 auto;
+    background-image: url(./images/image-equilibrium.jpg);
+    width: 310px;
+    height: 310px;
+    border-radius: 20px;
+    margin-top: 20px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; 
+}
+
+.main-image::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 310px;
+    height: 310px;
+    background-color: #00fdfb;
+    border-radius: 20px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.main-image:hover::before{
+    opacity: 0.5;
+}
+
+.main-image::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(./images/icon-view.svg);
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.main-image:hover::after{
+    opacity: 0.5;
+}
+
+.block-info{
+    margin: 0 auto;
+    width: 310px;
+}
+
+.block-info h2{
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    margin-top: 20px;
+    color: white;
+}
+
+.block-info p{
+    margin-top: 20px;
+    color: #7a8fae;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+}
+
+.block-price-days{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 310px;
+    padding-top: 20px;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.efir-image{
+    background-image: url(./images/icon-ethereum.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+}
+
+.price-eth{
+    color: #00fdfb;
+    font-family: 'Outfit', sans-serif;
+}
+
+.days{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.time-image{
+    background-image: url(./images/icon-clock.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+}
+
+.text-days{
+    font-family: 'Outfit', sans-serif;
+    color: #93aed9;
+}
+
+.border{
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 310px;
+    border: 1px solid #2f4159;
+}
+
+.info-comments{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 310px;
+    margin: 0 auto;
+    margin-top: 15px;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.people-image-comments{
+    background-image: url(./images/image-avatar.png);
+    height: 30px;
+    width: 30px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.text-comments{
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+}
+
+.info-comments span{
+    color: #8ba3bf;;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+}
+
+@media (max-width:500px){
+    .first-container{
+        width: 320px;
+        max-height: 600px; 
+    }
+    .doble-container{
+        width: 270px;
+        height: none; 
+        box-shadow: 15px 25px 10px #0c1729,
+                -15px 25px 10px #0c1729;
+    }
+    .main-image{
+        width: 250px;
+        height: 250px;
+    }
+    .block-info,
+    .block-price-days,
+    .border,
+    .info-comments{
+        width: 250px;
+    }
+    .info-comments{
+        margin-bottom: 30px;
+    }
+}
